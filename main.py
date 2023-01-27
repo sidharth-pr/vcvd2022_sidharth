@@ -87,7 +87,7 @@ def plot_graph(v0, mu):
     ax[1].grid()
 
     # exporting to a pdf file in the same directory
-    mpl.savefig("comparison_graph.pdf", format="pdf")
+    mpl.savefig("   comparison_graph.pdf", format="pdf")
 
     # displaying the graphs
     mpl.show()
@@ -136,14 +136,20 @@ def GUI():
     clear()
 
     # condition for water roads
-    if (row_int - 1) == 2:
-        col_int = 2
+    if row_int == 3:
+        col_int = 3
         col = ui_2[col_int]
+        print("\nThe road condition is: ", col)
+        input("\n\nPress Enter to continue...\n")
+        clear()
 
     # condition for gravel and sand roads
-    elif (row_int - 1) == 3 or (row_int - 1) == 4:
-        col_int = 0
+    elif row_int == 4 or row_int == 5:
+        col_int = 1
         col = ui_2[col_int]
+        print("\nThe road condition is: ", col)
+        input("\n\nPress Enter to continue...\n")
+        clear()
 
     else:
         col_int = int(input(
